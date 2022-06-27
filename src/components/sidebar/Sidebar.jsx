@@ -8,6 +8,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Button } from "@mui/material";
 import "./Sidebar.css";
 
@@ -25,7 +26,7 @@ function Sidebar() {
       <SidebarOption icon={<BookmarkBorderIcon />} text="ブックマーク" />
       <SidebarOption icon={<ListAltIcon />} text="リスト" />
       <SidebarOption icon={<PermIdentityIcon />} text="プロフィール" />
-      <SidebarOption icon={<PermIdentityIcon />} text="もっと見る" />
+      <SidebarOption icon={<MoreHorizIcon />} text="もっと見る" />
       {/**ツイートボタン*/}
       <Button variant="outlined" className="sidebar_tweet">
         ツイートする
