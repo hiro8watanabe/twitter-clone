@@ -1,7 +1,4 @@
-React ✕ FireBase で作るTwitter cloneです。
-
-
-
+# React ✕ FireBase で作るTwitter cloneです。
 
 # Getting Started with Create React App
 
