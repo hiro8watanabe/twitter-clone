@@ -1,7 +1,7 @@
-import React from "react";
-import { Post } from "./Post";
-import "./Timeline.css";
-import { TweetBox } from "./TweetBox";
+import React from 'react';
+import { Post } from './Post';
+import './Timeline.css';
+import { TweetBox } from './TweetBox';
 
 function Timeline() {
   return (
@@ -15,12 +15,13 @@ function Timeline() {
       <TweetBox />
 
       {/**Post */}
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post
+        displayName="Twitterクローン"
+        userName="@Hiro_Twitter"
+        text="初回ツイート"
+        avatar="https://shincode.info/wp-content/uplosds/2021/12/icon.png"
+        image="https://source.unsplash.com/randam"
+      />
     </div>
   );
 }

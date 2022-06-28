@@ -1,7 +1,11 @@
-import React from "react";
-import Search from "@mui/icons-material/Search";
-import { TwitterShareButton, TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
-import "./Widgets.css";
+import React from 'react';
+import Search from '@mui/icons-material/Search';
+import {
+  TwitterShareButton,
+  TwitterTimelineEmbed,
+  TwitterTweetEmbed,
+} from 'react-twitter-embed';
+import './Widgets.css';
 
 export const Widgets = () => {
   return (
@@ -13,9 +17,16 @@ export const Widgets = () => {
       <div className="widgets_widgetContainer">
         <h2>いまどうしてる？</h2>
         {/**ライブラリを追加 */}
-        <TwitterTweetEmbed tweetId={"1508838714180612100"} />
-        <TwitterTimelineEmbed sourceType="profile" screenName="reactjs" options={{ height: 400 }} />
-        <TwitterShareButton url={"https://twitter.com/reactjs"} options={{ text: "#reactjs is test", via: "reactjs-test" }} />
+        <TwitterTweetEmbed tweetId={'1508838714180612100'} />
+        <TwitterTimelineEmbed
+          sourceType="profile"
+          screenName="reactjs"
+          options={{ height: 400 }}
+        />
+        <TwitterShareButton
+          url={'https://twitter.com/reactjs'}
+          options={{ text: '#reactjs is test', via: 'reactjs-test' }}
+        />
       </div>
     </div>
   );

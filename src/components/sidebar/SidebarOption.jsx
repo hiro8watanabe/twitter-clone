@@ -1,5 +1,5 @@
-import React from "react";
-import "./SidebarOption.css";
+import React from 'react';
+import './SidebarOption.css';
 
 function SidebarOption(props) {
   const { text, icon } = props;
