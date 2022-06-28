@@ -12,10 +12,8 @@ export const Post = () => {
       <div className="post_body">
         <div className="post_header">
           <div className="post_headerText">
-            <h3>
-              Twitterクローン
-              <VerifiedUser className="post_badge" />
-            </h3>
+            <h3>Twitterクローン</h3>
+            <VerifiedUser className="post_badge" />
             <span className="post_headerSpecial">@Hiro_Twitter</span>
           </div>
           <div className="post_headerDescription">
