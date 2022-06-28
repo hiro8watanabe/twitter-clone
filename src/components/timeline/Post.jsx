@@ -12,11 +12,11 @@ export const Post = () => {
       <div className="post_body">
         <div className="post_header">
           <div className="post_headerText">
-            <h3>Twitterクローン</h3>
-            <span className="post_headerSpecial">
+            <h3>
+              Twitterクローン
               <VerifiedUser className="post_badge" />
-              @Hiro_Twitter
-            </span>
+            </h3>
+            <span className="post_headerSpecial">@Hiro_Twitter</span>
           </div>
           <div className="post_headerDescription">
             <p>ReactでTwitterのクローン作っているなう。</p>
