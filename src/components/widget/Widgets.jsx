@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "@mui/icons-material/Search";
 import { TwitterShareButton, TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
+import "./Widgets.css";
 
 export const Widgets = () => {
   return (
