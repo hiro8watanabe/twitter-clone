@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Post } from './Post';
 import './Timeline.css';
 import { TweetBox } from './TweetBox';
+import db from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 function Timeline() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const postData = collection(db, 'posts');
+    getDocs(postData).then((querySnapshot) => {
+      setPosts(querySnapshot.docs.map((doc) => doc.data()));
+    });
+  }, []);
+
   return (
     <div className="timeline">
       {/**Header */}
@@ -15,13 +26,17 @@ function Timeline() {
       <TweetBox />
 
       {/**Post */}
-      <Post
-        displayName="Twitterクローン"
-        userName="@Hiro_Twitter"
-        text="初回ツイート"
-        avatar="https://shincode.info/wp-content/uplosds/2021/12/icon.png"
-        image="https://source.unsplash.com/randam"
-      />
+      {posts.map((post) => (
+        <Post
+          /**key 仮置 */
+          key={post.text}
+          displayName={post.displayName}
+          userName={post.userName}
+          text={post.text}
+          avatar={post.avatar}
+          image={post.image}
+        />
+      ))}
     </div>
   );
 }
