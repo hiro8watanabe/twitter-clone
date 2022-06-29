@@ -3,7 +3,7 @@ import { Post } from './Post';
 import './Timeline.css';
 import { TweetBox } from './TweetBox';
 import db from '../../firebase';
-import { collection, getDocs, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { collection,  onSnapshot, orderBy, query } from 'firebase/firestore';
 
 function Timeline() {
   const [posts, setPosts] = useState([]);
