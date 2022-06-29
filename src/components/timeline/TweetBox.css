@@ -35,7 +35,7 @@
   border-radius: 30px !important;
   margin-top: 20px !important;
   margin-left: auto !important;
-  transition: all 0.15s ease !important;
+  transition: all 0.15s ease-out !important;
 }
 
 .tweetBox_tweetButton:hover {

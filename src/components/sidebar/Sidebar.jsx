@@ -19,7 +19,7 @@ function Sidebar() {
       <TwitterIcon className="sidebar_twitterIcon" />
 
       {/**sidebarOption*/}
-      <SidebarOption icon={<HomeIcon />} text="ホーム" />
+      <SidebarOption icon={<HomeIcon />} text="ホーム" active />
       <SidebarOption icon={<SearchIcon />} text="話題を検索" />
       <SidebarOption icon={<NotificationsNoneIcon />} text="通知" />
       <SidebarOption icon={<MailOutlineIcon />} text="メッセージ" />
