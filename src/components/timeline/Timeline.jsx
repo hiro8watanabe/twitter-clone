@@ -3,9 +3,10 @@ import { Post } from './Post';
 import './Timeline.css';
 import { TweetBox } from './TweetBox';
 import db from '../../firebase';
-import { collection,  onSnapshot, orderBy, query } from 'firebase/firestore';
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import FlipMove from 'react-flip-move';
 
-function Timeline() {
+export const Timeline = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -18,9 +19,9 @@ function Timeline() {
     // });
 
     /**リアルタイムでデータ取得 */
-    onSnapshot(q,(querySnapshot)=>{
+    onSnapshot(q, (querySnapshot) => {
       setPosts(querySnapshot.docs.map((doc) => doc.data()));
-    })
+    });
   }, []);
 
   return (
@@ -34,19 +35,19 @@ function Timeline() {
       <TweetBox />
 
       {/**Post */}
-      {posts.map((post) => (
-        <Post
-          /**key 仮置 */
-          key={post.text}
-          displayName={post.displayName}
-          userName={post.userName}
-          text={post.text}
-          avatar={post.avatar}
-          image={post.image}
-        />
-      ))}
+      <FlipMove>
+        {posts.map((post) => (
+          <Post
+            /**key 仮置 */
+            key={post.text}
+            displayName={post.displayName}
+            userName={post.userName}
+            text={post.text}
+            avatar={post.avatar}
+            image={post.image}
+          />
+        ))}
+      </FlipMove>
     </div>
   );
-}
-
-export default Timeline;
+};

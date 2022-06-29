@@ -6,13 +6,13 @@ import {
   VerifiedUser,
 } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './Post.css';
 
-export const Post = (props) => {
+export const Post = forwardRef((props, ref) => {
   const { displayName, userName, text, avatar, image } = props;
   return (
-    <div className="post">
+    <div className="post" ref={ref}>
       <div className="post_avatar">
         <Avatar src={avatar} />
       </div>
@@ -37,4 +37,4 @@ export const Post = (props) => {
       </div>
     </div>
   );
-};
+});
