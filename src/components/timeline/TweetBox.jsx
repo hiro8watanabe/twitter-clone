@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Avatar, Button } from '@mui/material';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import db from '../../firebase';
 import './TweetBox.css';
 
@@ -18,6 +18,7 @@ export const TweetBox = () => {
       text: tweetMessage,
       avatar: './avatar.png',
       image: tweetImage,
+      timestamp: serverTimestamp(),
     });
 
     setTweetMessage('');
